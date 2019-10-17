@@ -1,2 +1,1 @@
-# Graduate study
- recording
+# Hello world
