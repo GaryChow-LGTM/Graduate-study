@@ -7,7 +7,7 @@ def normalization_data(filepath = "./data.csv"):
     #data X1是肿瘤初始体积 Ki67
     data_X1[:,0]/=1000
     data_X1[:,1]/=1
-    #data X2是其他乱七八槽输入
+    #data X2是其他各项指标的数据输入
     data_X2 = data_X2.astype(np.float64)
     data_X2[:,0]/=3
     data_X2[:,1]/=3
@@ -19,7 +19,7 @@ def normalization_data(filepath = "./data.csv"):
     data_X2[:,7]/=3
     data_X2[:,8]/=2
     data_X2[:,9]/=3
-    data_X2[:,10] = (data_X2[:,10]-40)/(80-40)
+    data_X2[:,10] = (data_X2[:,10]-40)/(70-40)
     return np.concatenate((data_Y, data_X1, data_X2), axis = 1)
 
 def unnormalization_data(dataset):

@@ -10,9 +10,9 @@ def read_csvfile(filepath = "./data.csv"):
     
     data = np.genfromtxt(filepath, 
         dtype = np.float64,
-        skip_header = 1,
-        delimiter = ",",
-        unpack = False)
+        skip_header = 1, # 要在文件开头跳过的行数
+        delimiter = ",", # 用于分隔值的字符串。 默认情况下，任何连续的空格都用作分隔符。 
+        unpack = False) # 是否转置
     return data
 
 if __name__ == '__main__':
